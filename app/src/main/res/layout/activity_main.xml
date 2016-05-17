@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekRed"
+        android:max="255"
+        android:progress="0"
+        android:progressDrawable="@android:color/holo_red_light"
+        android:layout_below="@+id/textRed"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekGreen"
+        android:max="255"
+        android:progress="0"
+        android:progressDrawable="@android:color/holo_green_light"
+        android:layout_below="@+id/seekRed"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="48dp"
+        android:layout_alignParentEnd="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBlue"
+        android:max="255"
+        android:progress="0"
+        android:progressDrawable="@android:color/holo_blue_light"
+        android:layout_below="@+id/seekGreen"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="46dp"
+        android:layout_alignParentEnd="true" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pickerHeight"
+        android:layout_alignTop="@+id/pickerWidth"
+        android:layout_toEndOf="@+id/pickerWidth" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pickerOffsetX"
+        android:layout_alignTop="@+id/pickerHeight"
+        android:layout_toEndOf="@+id/pickerHeight" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pickerOffsetY"
+        android:layout_alignTop="@+id/pickerOffsetX"
+        android:layout_toEndOf="@+id/pickerOffsetX" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="0"
+        android:id="@+id/textRed"
+        android:layout_alignParentTop="true" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pickerWidth"
+        android:layout_above="@+id/button"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="48dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="0"
+        android:id="@+id/textGreen"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/pickerWidth" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="0"
+        android:id="@+id/textBlue"
+        android:layout_alignBottom="@+id/textRed"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/pickerHeight" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="9"
+        android:ems="10"
+        android:id="@+id/editOffsetZ"
+        android:layout_above="@+id/button"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
